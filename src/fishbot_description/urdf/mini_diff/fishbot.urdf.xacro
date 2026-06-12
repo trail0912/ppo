@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+  name="mini_diff_robot">
+
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/base.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/front.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/left.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/right.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/controller.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/laser.urdf.xacro"/>    
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/camera.urdf.xacro"/>    
+
+<xacro:include filename="$(find fishbot_description)/urdf/plugins/gazebo_control_plugin.xacro"/>   
+<xacro:include filename="$(find fishbot_description)/urdf/plugins/gazebo_sensor_plugin.xacro"/>   
+<xacro:include filename="$(find fishbot_description)/urdf/mini_diff/fishbot.ros2_control.xacro"/>   
+
+<xacro:base_xacro />
+<xacro:front_xacro />
+<xacro:left_xacro />
+<xacro:right_xacro />
+<xacro:controller_xacro />
+<xacro:laser_xacro />
+<xacro:camera_xacro />
+
+<xacro:gazebo_control_plugin />
+<xacro:gazebo_sensor_plugin />
+
+<!-- <xacro:fishbot_ros2_control/> -->
+
+<!-- 在 </robot> 前添加 -->
+
+</robot>

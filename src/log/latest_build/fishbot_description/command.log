@@ -1,0 +1,6 @@
+Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake /home/wheeltec/gazebo2/chapt6_ws/src/fishbot_description -DCMAKE_INSTALL_PREFIX=/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description
+Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake /home/wheeltec/gazebo2/chapt6_ws/src/fishbot_description -DCMAKE_INSTALL_PREFIX=/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description
+Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake --build /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description -- -j4 -l4
+Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake --build /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description -- -j4 -l4
+Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake --install /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description
+Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake --install /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description

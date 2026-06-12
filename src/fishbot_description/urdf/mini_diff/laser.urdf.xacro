@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="laser_xacro" params=""> 
+        <link
+            name="laser_link">
+            <inertial>
+            <origin
+                xyz="0.00196458631141112 -3.57895386319134E-06 -0.000201831632453575"
+                rpy="0 0 0" />
+            <mass
+                value="0.047751916373633" />
+            <inertia
+                ixx="3.38461999752882E-05"
+                ixy="-2.19897167172158E-09"
+                ixz="1.07118468708652E-06"
+                iyy="3.94150415870058E-05"
+                iyz="6.83978371158863E-10"
+                izz="5.60787042116943E-05" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/laser.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.376470588235294 0.376470588235294 0.376470588235294 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/laser.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="laser_joint"
+            type="fixed">
+            <origin
+            xyz="0.051343 -1.2576E-05 0.094524"
+            rpy="0 0 3.1416" />
+            <parent
+            link="base_link" />
+            <child
+            link="laser_link" />
+            <axis
+            xyz="0 0 0" />
+        </joint>
+    </xacro:macro>    
+</robot>

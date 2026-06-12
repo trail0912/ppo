@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="right_xacro" params="">
+        <link
+            name="right_link">
+            <inertial>
+            <origin
+                xyz="-1.21870783534317E-07 0.000208202451016909 3.9181444321662E-08"
+                rpy="0 0 0" />
+            <mass
+                value="0.0456749741036597" />
+            <inertia
+                ixx="1.81808804107878E-05"
+                ixy="-1.75851330929254E-11"
+                ixz="-3.93260181163677E-12"
+                iyy="3.14403862381703E-05"
+                iyz="-1.23305982339271E-11"
+                izz="1.81803658691048E-05" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/right_link.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.3 0.3 0.3 1" />
+            </material>
+            </visual>
+
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/right_link.STL" />
+            </geometry>
+            </collision>
+        </link>
+
+    
+        <gazebo reference="right_link">
+            <implicit_spring_damper>1</implicit_spring_damper>
+        </gazebo>
+
+        <joint
+            name="right_joint"
+            type="continuous">
+            <origin
+            xyz="-0.069657 -0.079776 0.0162"
+            rpy="0 0 0" />
+            <dynamics 
+            damping="0.8"
+            friction="0.3"/>
+            <parent
+            link="base_link" />
+            <child
+            link="right_link" />
+            <axis
+            xyz="0 1 0" />
+        </joint>
+    </xacro:macro>
+</robot>

@@ -1,0 +1,109 @@
+[0.016s] Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake /home/wheeltec/gazebo2/chapt6_ws/src/fishbot_description -DCMAKE_INSTALL_PREFIX=/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description
+[0.315s] -- The C compiler identification is GNU 11.4.0
+[0.509s] -- The CXX compiler identification is GNU 11.4.0
+[0.525s] -- Detecting C compiler ABI info
+[0.732s] -- Detecting C compiler ABI info - done
+[0.752s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.758s] -- Detecting C compile features
+[0.758s] -- Detecting C compile features - done
+[0.765s] -- Detecting CXX compiler ABI info
+[1.019s] -- Detecting CXX compiler ABI info - done
+[1.033s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.034s] -- Detecting CXX compile features
+[1.034s] -- Detecting CXX compile features - done
+[1.049s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.514s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.853s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.114s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.114s] -- Added test 'lint_cmake' to check CMake code style
+[2.114s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.133s] -- Added test 'xmllint' to check XML markup files
+[2.133s] -- Configuring done
+[2.138s] -- Generating done
+[2.144s] -- Build files have been written to: /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description
+[2.171s] Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake /home/wheeltec/gazebo2/chapt6_ws/src/fishbot_description -DCMAKE_INSTALL_PREFIX=/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description
+[2.172s] Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake --build /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description -- -j4 -l4
+[2.306s] Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake --build /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description -- -j4 -l4
+[2.387s] Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description': /usr/bin/cmake --install /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description
+[2.403s] -- Install configuration: ""
+[2.404s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf
+[2.405s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.xacro
+[2.406s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.urdf
+[2.408s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/plugins
+[2.408s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/plugins/gazebo_control_plugin.xacro
+[2.409s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/plugins/gazebo_sensor_plugin.xacro
+[2.410s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.pdf
+[2.411s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff
+[2.411s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/camera.urdf.xacro
+[2.412s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/right.urdf.xacro
+[2.412s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/laser.urdf.xacro
+[2.413s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/controller.urdf.xacro
+[2.413s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/base.urdf.xacro
+[2.414s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/left.urdf.xacro
+[2.414s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/front.urdf.xacro
+[2.415s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/fishbot.ros2_control.xacro
+[2.416s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff/fishbot.urdf.xacro
+[2.418s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/model.config
+[2.419s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.gv
+[2.419s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/launch
+[2.419s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/launch/display_robot.launch.py
+[2.419s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/launch/__pycache__
+[2.420s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/launch/__pycache__/display_robot.launch.cpython-310.pyc
+[2.424s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/launch/gazebo_sim.launch.py
+[2.424s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes
+[2.426s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/camera_link.STL
+[2.426s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/base_link.STL
+[2.426s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/right_link.STL
+[2.426s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/controller_link.STL
+[2.427s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/laser.STL
+[2.429s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/front_link.STL
+[2.430s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/meshes/left_link.STL
+[2.433s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/config
+[2.434s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/config/display_robot_model.rviz
+[2.434s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/config/fishbot_ros2_controller.yaml
+[2.435s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world
+[2.435s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world/room
+[2.436s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world/room/model.config
+[2.436s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world/room/model.sdf
+[2.437s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world/robot_room.world
+[2.438s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world1
+[2.438s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world1/room
+[2.438s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world1/room/model.config
+[2.438s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world1/room/model.sdf
+[2.439s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world1/robot_room.world
+[2.440s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world2
+[2.440s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world2/room
+[2.441s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world2/room/model.config
+[2.441s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world2/room/model.sdf
+[2.441s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world2/robot_room.world
+[2.442s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world3
+[2.442s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world3/room
+[2.443s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world3/room/model.config
+[2.443s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world3/room/model.sdf
+[2.444s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world3/robot_room.world
+[2.445s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world4
+[2.445s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world4/room
+[2.445s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world4/room/model.config
+[2.446s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world4/room/model.sdf
+[2.446s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world4/robot_room.world
+[2.447s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world5
+[2.447s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world5/room
+[2.448s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world5/room/model.config
+[2.448s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world5/room/model.sdf
+[2.449s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/world5/robot_room.world
+[2.450s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/ament_index/resource_index/package_run_dependencies/fishbot_description
+[2.450s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/ament_index/resource_index/parent_prefix_path/fishbot_description
+[2.451s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/environment/ament_prefix_path.sh
+[2.451s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/environment/ament_prefix_path.dsv
+[2.451s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/environment/path.sh
+[2.452s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/environment/path.dsv
+[2.452s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/local_setup.bash
+[2.452s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/local_setup.sh
+[2.453s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/local_setup.zsh
+[2.453s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/local_setup.dsv
+[2.454s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/package.dsv
+[2.455s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/ament_index/resource_index/packages/fishbot_description
+[2.455s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/cmake/fishbot_descriptionConfig.cmake
+[2.455s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/cmake/fishbot_descriptionConfig-version.cmake
+[2.458s] -- Installing: /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_description/share/fishbot_description/package.xml
+[2.462s] Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description' returned '0': /usr/bin/cmake --install /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_description

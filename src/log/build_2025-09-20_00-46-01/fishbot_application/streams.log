@@ -1,0 +1,61 @@
+[2.063s] Invoking command in '/home/wheeltec/gazebo2/chapt6_ws/src/fishbot_application': PYTHONPATH=/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/prefix_override:/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/fishbot_application build --build-base /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build install --record /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/install.log --single-version-externally-managed install_data
+[2.581s] running egg_info
+[2.584s] creating ../build/fishbot_application/fishbot_application.egg-info
+[2.585s] writing ../build/fishbot_application/fishbot_application.egg-info/PKG-INFO
+[2.585s] writing dependency_links to ../build/fishbot_application/fishbot_application.egg-info/dependency_links.txt
+[2.585s] writing entry points to ../build/fishbot_application/fishbot_application.egg-info/entry_points.txt
+[2.585s] writing requirements to ../build/fishbot_application/fishbot_application.egg-info/requires.txt
+[2.585s] writing top-level names to ../build/fishbot_application/fishbot_application.egg-info/top_level.txt
+[2.585s] writing manifest file '../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[2.587s] reading manifest file '../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[2.588s] writing manifest file '../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[2.588s] running build
+[2.588s] running build_py
+[2.588s] creating /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build
+[2.589s] creating /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib
+[2.589s] creating /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.589s] copying fishbot_application/init_robot_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.590s] copying fishbot_application/robot_env1.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.590s] copying fishbot_application/robot_env.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.591s] copying fishbot_application/get_robot_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.591s] copying fishbot_application/predict.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.592s] copying fishbot_application/nav_to_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.592s] copying fishbot_application/__init__.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.592s] copying fishbot_application/train.py -> /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application
+[2.592s] running install
+[2.592s] running install_lib
+[2.592s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.592s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/init_robot_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.592s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/robot_env1.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/robot_env.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/get_robot_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/predict.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/nav_to_pose.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/__init__.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.593s] copying /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build/lib/fishbot_application/train.py -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application
+[2.594s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/init_robot_pose.py to init_robot_pose.cpython-310.pyc
+[2.595s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/robot_env1.py to robot_env1.cpython-310.pyc
+[2.599s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/robot_env.py to robot_env.cpython-310.pyc
+[2.602s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/get_robot_pose.py to get_robot_pose.cpython-310.pyc
+[2.602s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/predict.py to predict.cpython-310.pyc
+[2.602s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/nav_to_pose.py to nav_to_pose.cpython-310.pyc
+[2.603s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/__init__.py to __init__.cpython-310.pyc
+[2.603s] byte-compiling /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application/train.py to train.cpython-310.pyc
+[2.604s] running install_data
+[2.605s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share
+[2.605s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/ament_index
+[2.605s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/ament_index/resource_index
+[2.605s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/ament_index/resource_index/packages
+[2.607s] copying resource/fishbot_application -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/ament_index/resource_index/packages
+[2.607s] creating /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/fishbot_application
+[2.607s] copying package.xml -> /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/share/fishbot_application
+[2.607s] running install_egg_info
+[2.608s] Copying ../build/fishbot_application/fishbot_application.egg-info to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages/fishbot_application-0.0.0-py3.10.egg-info
+[2.609s] running install_scripts
+[2.630s] Installing get_robot_pose script to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/fishbot_application
+[2.630s] Installing init_robot_pose script to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/fishbot_application
+[2.631s] Installing nav_to_pose script to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/fishbot_application
+[2.631s] Installing predict script to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/fishbot_application
+[2.631s] Installing train script to /home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/fishbot_application
+[2.631s] writing list of installed files to '/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/install.log'
+[2.665s] Invoked command in '/home/wheeltec/gazebo2/chapt6_ws/src/fishbot_application' returned '0': PYTHONPATH=/home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/prefix_override:/home/wheeltec/gazebo2/chapt6_ws/src/install/fishbot_application/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/fishbot_application build --build-base /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/build install --record /home/wheeltec/gazebo2/chapt6_ws/src/build/fishbot_application/install.log --single-version-externally-managed install_data

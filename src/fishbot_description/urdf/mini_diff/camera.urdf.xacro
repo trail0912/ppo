@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="camera_xacro" params="">
+        <link
+            name="camera_link">
+            <inertial>
+            <origin
+                xyz="-3.17419041426237E-07 -3.53954923411071E-07 1.07624235690107E-07"
+                rpy="0 0 0" />
+            <mass
+                value="0.0559842512080128" />
+            <inertia
+                ixx="0.000130810959339215"
+                ixy="1.20255128206772E-07"
+                ixz="1.62335437080119E-06"
+                iyy="1.91148634967908E-05"
+                iyz="-2.80016755802384E-08"
+                izz="0.000131387469523029" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/camera_link.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="1 1 1 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/camera_link.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="camera_joint"
+            type="fixed">
+            <origin
+            xyz="0.113645491027958 0.000165424573388292 0.076204"
+            rpy="0 0 0" />
+            <parent
+            link="base_link" />
+            <child
+            link="camera_link" />
+            <axis
+            xyz="0 0 0" />
+        </joint>
+    </xacro:macro>
+</robot>
