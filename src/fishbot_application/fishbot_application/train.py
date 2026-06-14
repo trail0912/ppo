@@ -425,32 +425,29 @@ def lstm_main():
     try:
         # 初始化环境
         env = RobotEnv()
+        env.reset_episode_counter()
+        env.reset_stats()
+        raw_env = env  # 保存引用，用于最后取 stats
         x1 = random.uniform(4, 5)
         y1 = random.uniform(1, 2)
-        # x1 = random.uniform(3, 5)
-        # y1 = random.uniform(-4, -5)
         env.set_goal(x=x1,y=y1)
-        # env = gym.wrappers.Autoreset(env)
 
         custom_objects = {
             "LSTMPolicy": LSTMPolicy,
             "LSTMFeatureExtractor": LSTMFeatureExtractor,
             "CustomMLPExtractor": CustomMLPExtractor
         }
-        model = PPO(LSTMPolicy, env, verbose=1,clip_range=0.25, ent_coef=0.1,vf_coef=0.7,learning_rate=0.0003,tensorboard_log="./ppo_tensorboard/",device="cpu")
+        model = PPO(LSTMPolicy, env, verbose=1,clip_range=0.25, ent_coef=0.1,vf_coef=0.7,learning_rate=0.0003,tensorboard_log="./ppo_tensorboard/",device="auto")
         model.clip_range = lambda progress: 0.25
         model.ent_coef = 0.1
         model.vf_coef = 0.7
-        # # 2. 修改学习率调度器为固定值
         model.lr_schedule = ConstantSchedule(0.0003)
         optimizer_kwargs = model.policy.optimizer.defaults
-        # 关键：删除原有lr，避免重复传递
         if 'lr' in optimizer_kwargs:
             del optimizer_kwargs['lr']
-        # 3. 重新初始化优化器（应用新调度器）
         model.policy.optimizer = model.policy.optimizer.__class__(
             model.policy.parameters(),
-            lr=model.lr_schedule(1.0),  # 1.0表示初始进度
+            lr=model.lr_schedule(1.0),
             **optimizer_kwargs
         )
         model.policy.reset_hidden_state(batch_size=1)
@@ -458,9 +455,9 @@ def lstm_main():
         model.learn(total_timesteps=61440,log_interval=1,tb_log_name="Move_robot30")
         guard.printall()
         model.save("Move_robot30")
+        return ("LSTM", raw_env.get_stats())
 
     finally:
-        # 确保资源清理
         env.close()
 
 def bilstm_main():
@@ -472,35 +469,33 @@ def bilstm_main():
     try:
         # 初始化环境
         env = RobotEnv()
-        # env.set_goal(x=5.0,y=1.5)
+        env.reset_episode_counter()
+        env.reset_stats()
+        raw_env = env
         x1 = random.uniform(4, 5)
         y1 = random.uniform(1, 2)
         env.set_goal(x=x1,y=y1)
         env = gym.wrappers.Autoreset(env)
 
         model = PPO(BiLSTM_Timing_Policy, env, verbose=1,clip_range=0.25, ent_coef=0.1,vf_coef=0.6,learning_rate=0.0003,tensorboard_log="./ppo_tensorboard/")
-        # model=PPO.load("PPO_robot20",env=env)
         model.clip_range = lambda progress: 0.25
         model.ent_coef = 0.1
         model.vf_coef = 0.6
-        # 2. 修改学习率调度器为固定值
         model.lr_schedule = ConstantSchedule(0.0003)
         optimizer_kwargs = model.policy.optimizer.defaults
-        # 关键：删除原有lr，避免重复传递
         if 'lr' in optimizer_kwargs:
             del optimizer_kwargs['lr']
-        # 3. 重新初始化优化器（应用新调度器）
         model.policy.optimizer = model.policy.optimizer.__class__(
             model.policy.parameters(),
-            lr=model.lr_schedule(1.0),  # 1.0表示初始进度
+            lr=model.lr_schedule(1.0),
             **optimizer_kwargs
         )
-        model.learn(total_timesteps=10240,log_interval=1,tb_log_name="PPO_robot5")
+        model.learn(total_timesteps=61440,log_interval=1,tb_log_name="BiLSTM_robot5")
         guard.printall()
-        model.save("PPO_robot5")
+        model.save("BiLSTM_robot5")
+        return ("BiLSTM", raw_env.get_stats())
 
     finally:
-        # 确保资源清理
         env.close()
 
 def ppo_main():
@@ -512,36 +507,100 @@ def ppo_main():
     try:
         # 初始化环境
         env = RobotEnv1()
-        # env.set_goal(x=5.0,y=1.5)
+        env.reset_episode_counter()
+        env.reset_stats()
+        raw_env = env
         x1 = random.uniform(4, 5)
         y1 = random.uniform(1, 2)
         env.set_goal(x=x1,y=y1)
         env = gym.wrappers.Autoreset(env)
 
         model = PPO("MlpPolicy", env, verbose=1,clip_range=0.25, ent_coef=0.1,vf_coef=0.6,learning_rate=0.0003,tensorboard_log="./ppo_tensorboard/")
-        # model=PPO.load("PPO_robot20",env=env)
         model.clip_range = lambda progress: 0.25
         model.ent_coef = 0.1
         model.vf_coef = 0.6
-        # 2. 修改学习率调度器为固定值
         model.lr_schedule = ConstantSchedule(0.0003)
         optimizer_kwargs = model.policy.optimizer.defaults
-        # 关键：删除原有lr，避免重复传递
         if 'lr' in optimizer_kwargs:
             del optimizer_kwargs['lr']
-        # 3. 重新初始化优化器（应用新调度器）
         model.policy.optimizer = model.policy.optimizer.__class__(
             model.policy.parameters(),
-            lr=model.lr_schedule(1.0),  # 1.0表示初始进度
+            lr=model.lr_schedule(1.0),
             **optimizer_kwargs
         )
-        model.learn(total_timesteps=10240,log_interval=1,tb_log_name="PPO_robot5")
+        model.learn(total_timesteps=61440,log_interval=1,tb_log_name="PPO_robot5")
         guard.printall()
         model.save("PPO_robot5")
+        return ("PPO", raw_env.get_stats())
 
     finally:
-        # 确保资源清理
         env.close()
+
+def _print_summary_table(all_results):
+    """打印所有模型的汇总对比表"""
+    print("\n" + "=" * 80)
+    print("TRAINING SUMMARY")
+    print("=" * 80)
+
+    header = f"{'Model':<14} {'Episodes':>9} {'Success%':>9} {'AvgReward':>10} {'AvgSteps':>9} {'AvgDist':>8}"
+    print(header)
+    print("-" * len(header))
+
+    for model_name, stats in all_results:
+        total = len(stats)
+        if total == 0:
+            print(f"{model_name:<14} {'(no data)':>50}")
+            continue
+
+        arrives = sum(1 for s in stats if s['event'] == 'arrive')
+        success_rate = arrives / total * 100
+        avg_reward = sum(s['reward'] for s in stats) / total
+        avg_steps = sum(s['steps'] for s in stats) / total
+        avg_dist = sum(s['goal_dist'] for s in stats) / total
+
+        print(f"{model_name:<14} {total:>9} {success_rate:>8.1f}% "
+              f"{avg_reward:>10.2f} {avg_steps:>9.1f} {avg_dist:>8.2f}")
+
+    print("-" * len(header))
+    print("=" * 80)
+
+
+def main():
+    """依次运行 3 个算法 + 2 个消融实验"""
+    from fishbot_application.train1 import main as ablation1
+    from fishbot_application.train2 import main as ablation2
+
+    all_results = []
+
+    print("=" * 60)
+    print("[1/5] LSTM Training")
+    print("=" * 60)
+    all_results.append(lstm_main())
+
+    print("=" * 60)
+    print("[2/5] PPO Training")
+    print("=" * 60)
+    all_results.append(ppo_main())
+
+    print("=" * 60)
+    print("[3/5] BiLSTM Training")
+    print("=" * 60)
+    all_results.append(bilstm_main())
+
+    print("=" * 60)
+    print("[4/5] Ablation Study 1")
+    print("=" * 60)
+    all_results.append(ablation1())
+
+    print("=" * 60)
+    print("[5/5] Ablation Study 2")
+    print("=" * 60)
+    all_results.append(ablation2())
+
+    print("=" * 60)
+    print("All 5 training runs completed!")
+    _print_summary_table(all_results)
+
 
 if __name__ == '__main__':
     lstm_main()

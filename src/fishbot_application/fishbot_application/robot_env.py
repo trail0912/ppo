@@ -89,6 +89,8 @@ class RobotEnv(gym.Env):
         self._is_terminated = False
         self._last_collision_time = 0
         self._resetting = False  # reset 期间抑制轨迹发布
+        self._episode_count = 0  # 当前模型内的回合计数
+        self._episode_stats = []  # 每回合统计 [{event, reward, steps, goal_dist}]
         self.goal=0
         self.goal_dist=0
         self.reward=0
@@ -141,6 +143,18 @@ class RobotEnv(gym.Env):
             ])
 
 
+
+    def reset_episode_counter(self):
+        """每个新模型开始时调用，回合计数从 1 开始"""
+        self._episode_count = 0
+
+    def reset_stats(self):
+        """每个新模型开始时调用，清空回合统计"""
+        self._episode_stats = []
+
+    def get_stats(self):
+        """获取当前模型所有回合的统计"""
+        return self._episode_stats.copy()
 
     def set_goal(self, x, y):
         """设置训练目标点"""
@@ -314,7 +328,9 @@ class RobotEnv(gym.Env):
         """重置环境，不依赖 Gazebo 服务"""
         super().reset(seed=seed)
 
-        # 1. 初始化步骤计数和状态
+        # 1. 回合计数 + 初始化状态
+        self._episode_count += 1
+        print(f"\n{'='*40}\n=== Episode {self._episode_count} ===\n{'='*40}")
         self.step_count = 0
         self._is_terminated = False
         self.reward = 0.0
@@ -568,6 +584,7 @@ class RobotEnv(gym.Env):
                     reward =-40-goal_dist*3
                     self.reward+=reward
                     self._is_terminated = True
+                    self._record_episode("collision", goal_dist)
                     print(
                         f"collision | step: {self.step_count} | "
                         f"reward: {self.reward:.2f} | "
@@ -587,6 +604,7 @@ class RobotEnv(gym.Env):
                 reward += 50+ max(0, 150 - self.step_count) * 0.2
                 self.reward+=reward
                 self._is_terminated = True
+                self._record_episode("arrive", goal_dist)
                 print(
                     f"arrive | step: {self.step_count} | "
                     f"reward: {self.reward:.2f} | "
@@ -603,6 +621,7 @@ class RobotEnv(gym.Env):
                 reward += -25-2*goal_dist
                 self.reward+=reward
                 self._is_terminated = True
+                self._record_episode("timeout", goal_dist)
                 print(
                     f"timeout | step: {self.step_count} | "
                     f"reward: {self.reward:.2f} | "
@@ -681,6 +700,15 @@ class RobotEnv(gym.Env):
     def _clear_trajectory_marker(self):
         """旧 marker 靠 lifetime 在 reset 期间自动过期，无需手动清除"""
         pass
+
+    def _record_episode(self, event_type, goal_dist):
+        """记录每回合统计"""
+        self._episode_stats.append({
+            'event': event_type,
+            'reward': round(self.reward, 2),
+            'steps': self.step_count,
+            'goal_dist': round(goal_dist, 2)
+        })
 
     def _publish_visualization(self):
         if not self.robot_pose:

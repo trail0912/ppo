@@ -27,10 +27,12 @@ setup(
             "ppo_train=fishbot_application.train:ppo_main",
             "bilstm_train=fishbot_application.train:bilstm_main",
             "predict=fishbot_application.predict:main",
+            "predict_all=fishbot_application.predict:predict_all",
             "passive_joint_pub=fishbot_application.passive_joint_pub:main",
             "odom_tf_broadcaster=fishbot_application.odom_tf_broadcaster:main",
             "lstm_train1=fishbot_application.train1:main",
             "lstm_train2=fishbot_application.train2:main",
+            "train_all=fishbot_application.train:main",
         ],
     },
 )
