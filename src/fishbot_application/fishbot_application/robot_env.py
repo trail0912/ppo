@@ -568,8 +568,13 @@ class RobotEnv(gym.Env):
                     reward =-40-goal_dist*3
                     self.reward+=reward
                     self._is_terminated = True
-                    #print('碰撞 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                    self.log_event("collision", goal_dist)
+                    print(
+                        f"collision | step: {self.step_count} | "
+                        f"reward: {self.reward:.2f} | "
+                        f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                        f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                        f"dist: {goal_dist:.2f}"
+                    )
             terminated = True
 
         # 到达目标奖励
@@ -582,8 +587,13 @@ class RobotEnv(gym.Env):
                 reward += 50+ max(0, 150 - self.step_count) * 0.2
                 self.reward+=reward
                 self._is_terminated = True
-                #print('到达 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                self.log_event("arrive", goal_dist)
+                print(
+                    f"arrive | step: {self.step_count} | "
+                    f"reward: {self.reward:.2f} | "
+                    f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                    f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                    f"dist: {goal_dist:.2f}"
+                )
             terminated = True
         elif self.step_count >= 150 and current_time - self._last_collision_time > 10.0:
             if not self._is_terminated:
@@ -593,8 +603,13 @@ class RobotEnv(gym.Env):
                 reward += -25-2*goal_dist
                 self.reward+=reward
                 self._is_terminated = True
-                #print('超时 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                self.log_event("timeout", goal_dist)
+                print(
+                    f"timeout | step: {self.step_count} | "
+                    f"reward: {self.reward:.2f} | "
+                    f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                    f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                    f"dist: {goal_dist:.2f}"
+                )
             terminated = True
         else:
             terminated=False
@@ -736,29 +751,6 @@ class RobotEnv(gym.Env):
             goal_marker.scale.z = 0.3
             goal_marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=0.8)
             self.goal_pub.publish(goal_marker)
-
-    # 增加一个方法同时打印和写日志
-    def log_event(self, event_type, goal_dist):
-        msg = f"{event_type} | step: {self.step_count} | reward: {self.reward:.2f} | " \
-            f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | " \
-            f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | dist: {goal_dist:.2f}"
-
-        # 打印到终端
-        print(msg)
-
-        # 写入 CSV
-        with open(self.event_log_path, "a", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                event_type,
-                self.step_count,
-                self.reward,
-                self.robot_pose["x"],
-                self.robot_pose["y"],
-                self.current_goal[0],
-                self.current_goal[1],
-                goal_dist
-            ])
 
 
 class CmdVelGuard():
