@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="base_xacro" params="">
+      <link name="base_footprint" />
+        <joint name="base_joint" type="fixed">
+            <parent link="base_footprint" />
+            <child link="base_link" />
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        </joint>
+        <link
+            name="base_link">
+            <inertial>
+            <origin
+                xyz="-0.0189235960546199 9.05026804837732E-05 0.0215071924292335"
+                rpy="0 0 0" />
+            <mass
+                value="0.401051738530766" />
+            <inertia
+                ixx="0.000246070776118601"
+                ixy="1.87631429488719E-06"
+                ixz="7.31414518571882E-07"
+                iyy="0.000368949634983636"
+                iyz="-4.15485848351081E-07"
+                izz="0.000529231877397729" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/base_link.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.349019607843137 0.349019607843137 0.349019607843137 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://fishbot_description/meshes/base_link.STL" />
+            </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+</robot>

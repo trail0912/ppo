@@ -1,0 +1,2 @@
+event_type,step_count,episode_reward,robot_x,robot_y,goal_x,goal_y,goal_dist
+timeout,150,-49.10979707999844,0.0,0.0,4.282093378711959,1.5526677061362424,4.554898539999237

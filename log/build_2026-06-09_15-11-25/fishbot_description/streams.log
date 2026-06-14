@@ -1,0 +1,5 @@
+[0.102s] Invoking command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description -- -j16 -l16
+[0.111s] [0mCMake Error: The source directory "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description" does not exist.
+[0.111s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.111s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.113s] Invoked command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description -- -j16 -l16

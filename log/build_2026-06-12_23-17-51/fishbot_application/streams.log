@@ -1,0 +1,54 @@
+[0.360s] Invoking command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build
+[0.489s] running develop
+[0.568s] Removing /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot-application.egg-link (link to .)
+[0.586s] Invoked command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build
+[0.587s] Invoking command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_application': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data --force
+[0.702s] running egg_info
+[0.710s] writing ../../build/fishbot_application/fishbot_application.egg-info/PKG-INFO
+[0.710s] writing dependency_links to ../../build/fishbot_application/fishbot_application.egg-info/dependency_links.txt
+[0.710s] writing entry points to ../../build/fishbot_application/fishbot_application.egg-info/entry_points.txt
+[0.710s] writing requirements to ../../build/fishbot_application/fishbot_application.egg-info/requires.txt
+[0.710s] writing top-level names to ../../build/fishbot_application/fishbot_application.egg-info/top_level.txt
+[0.725s] reading manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[0.726s] writing manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[0.726s] running build
+[0.726s] running build_py
+[0.726s] copying fishbot_application/robot_env.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application
+[0.726s] running install
+[0.729s] running install_lib
+[0.738s] creating /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/__init__.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/train.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/predict.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/init_robot_pose.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/nav_to_pose.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/get_robot_pose.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/odom_tf_broadcaster.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/robot_env1.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/passive_joint_pub.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.738s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/robot_env.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.739s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/__init__.py to __init__.cpython-312.pyc
+[0.739s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/train.py to train.cpython-312.pyc
+[0.741s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/predict.py to predict.cpython-312.pyc
+[0.741s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/init_robot_pose.py to init_robot_pose.cpython-312.pyc
+[0.741s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/nav_to_pose.py to nav_to_pose.cpython-312.pyc
+[0.741s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/get_robot_pose.py to get_robot_pose.cpython-312.pyc
+[0.742s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/odom_tf_broadcaster.py to odom_tf_broadcaster.cpython-312.pyc
+[0.742s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/robot_env1.py to robot_env1.cpython-312.pyc
+[0.744s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/passive_joint_pub.py to passive_joint_pub.cpython-312.pyc
+[0.744s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/robot_env.py to robot_env.cpython-312.pyc
+[0.746s] running install_data
+[0.746s] copying resource/fishbot_application -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/share/ament_index/resource_index/packages
+[0.746s] copying package.xml -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application
+[0.746s] running install_egg_info
+[0.755s] Copying ../../build/fishbot_application/fishbot_application.egg-info to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application-0.0.0-py3.12.egg-info
+[0.755s] running install_scripts
+[0.809s] Installing get_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing init_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing nav_to_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing odom_tf_broadcaster script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing passive_joint_pub script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing predict script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] Installing train script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.810s] writing list of installed files to '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log'
+[0.825s] Invoked command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_application' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data --force

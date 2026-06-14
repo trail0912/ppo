@@ -1,0 +1,25 @@
+[0.364s] Invoking command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build --no-deps symlink_data --force
+[0.509s] running develop
+[0.590s] running egg_info
+[0.598s] writing fishbot_application.egg-info/PKG-INFO
+[0.599s] writing dependency_links to fishbot_application.egg-info/dependency_links.txt
+[0.599s] writing entry points to fishbot_application.egg-info/entry_points.txt
+[0.599s] writing requirements to fishbot_application.egg-info/requires.txt
+[0.599s] writing top-level names to fishbot_application.egg-info/top_level.txt
+[0.614s] reading manifest file 'fishbot_application.egg-info/SOURCES.txt'
+[0.614s] writing manifest file 'fishbot_application.egg-info/SOURCES.txt'
+[0.622s] running build_ext
+[0.622s] Creating /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot-application.egg-link (link to .)
+[0.622s] Installing get_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing init_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing nav_to_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing odom_tf_broadcaster script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing passive_joint_pub script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing predict script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] Installing train script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.623s] 
+[0.623s] Installed /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application
+[0.623s] running symlink_data
+[0.623s] symbolically linking /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/resource/fishbot_application -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/share/ament_index/resource_index/packages
+[0.623s] symbolically linking /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/package.xml -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application
+[0.643s] Invoked command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build --no-deps symlink_data --force

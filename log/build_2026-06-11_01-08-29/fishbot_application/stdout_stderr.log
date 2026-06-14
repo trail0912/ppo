@@ -1,0 +1,20 @@
+running develop
+running egg_info
+writing fishbot_application.egg-info/PKG-INFO
+writing dependency_links to fishbot_application.egg-info/dependency_links.txt
+writing entry points to fishbot_application.egg-info/entry_points.txt
+writing requirements to fishbot_application.egg-info/requires.txt
+writing top-level names to fishbot_application.egg-info/top_level.txt
+reading manifest file 'fishbot_application.egg-info/SOURCES.txt'
+writing manifest file 'fishbot_application.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot-application.egg-link (link to .)
+Installing get_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+Installing init_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+Installing nav_to_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+Installing passive_joint_pub script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+Installing predict script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+Installing train script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+
+Installed /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application
+running symlink_data

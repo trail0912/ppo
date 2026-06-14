@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="front_xacro" params="">
+        <link name="front_bracket_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="0.01"/>
+                <inertia ixx="1e-6" ixy="0" ixz="0"
+                          iyy="1e-6" iyz="0"
+                          izz="1e-6"/>
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="0.005" length="0.01"/>
+                </geometry>
+                <material name="">
+                    <color rgba="0.2 0.2 0.2 1" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius="0.005" length="0.01"/>
+                </geometry>
+            </collision>
+        </link>
+
+        <link name="front_wheel_link">
+            <inertial>
+                <origin
+                    xyz="-1.47494718217983E-05 -1.93343915743998E-05 -8.69445031316304E-05"
+                    rpy="0 0 0" />
+                <mass value="0.0373449888165875" />
+                <inertia
+                    ixx="1.29829858117941E-05"
+                    ixy="5.65959966526581E-08"
+                    ixz="4.68086982069799E-08"
+                    iyy="1.79292839228678E-05"
+                    iyz="3.01923849693133E-08"
+                    izz="1.29419322633102E-05" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://fishbot_description/meshes/front_link.STL" />
+                </geometry>
+                <material name="">
+                    <color rgba="0.3 0.3 0.3 1" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="1.5708 0 0" />
+                <geometry>
+                    <cylinder radius="0.015" length="0.02" />
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name="front_turn_joint" type="revolute">
+            <origin xyz="0.064 0 0.02" rpy="0 0 0"/>
+            <parent link="base_link"/>
+            <child link="front_bracket_link"/>
+            <axis xyz="0 0 1"/>
+            <limit lower="-6.28" upper="6.28" effort="0.1" velocity="10"/>
+            <dynamics damping="0.01" friction="0.01"/>
+        </joint>
+
+        <joint name="front_roll_joint" type="continuous">
+            <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+            <parent link="front_bracket_link"/>
+            <child link="front_wheel_link"/>
+            <axis xyz="0 1 0"/>
+            <dynamics damping="0.1" friction="0.05"/>
+        </joint>
+
+        <gazebo reference="front_wheel_link">
+            <mu1>0.001</mu1>
+            <mu2>0.001</mu2>
+            <kp>1e6</kp>
+            <kd>100</kd>
+        </gazebo>
+    </xacro:macro>
+</robot>

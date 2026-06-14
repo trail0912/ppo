@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://cdds.io/config
+            https://raw.githubusercontent.com/eclipse-cyclonedds/cyclonedds/master/etc/cyclonedds.xsd">
+  <Domain id="any">
+    <General>
+      <!-- 单机训练：使用本地回环，禁用组播（避免组播风暴阻塞通信）-->
+      <NetworkInterfaceAddress>lo</NetworkInterfaceAddress>
+      <AllowMulticast>false</AllowMulticast>
+      <DontRoute>true</DontRoute>
+    </General>
+    <Discovery>
+      <Peers>
+        <Peer address="localhost"/>
+      </Peers>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <MaxAutoParticipantIndex>9</MaxAutoParticipantIndex>
+    </Discovery>
+    <Internal>
+      <Watermarks>
+        <WhcHigh>500kB</WhcHigh>
+      </Watermarks>
+      <!-- 限制最大参与者数量，防止训练中 DDS 资源膨胀 -->
+      <MaxParticipants>4</MaxParticipants>
+      <!-- 限制排队样本数，避免内存泄漏 -->
+      <MaxQueuedSamples>64</MaxQueuedSamples>
+      <!-- 减少心跳间隔，加快节点退出后的清理速度 -->
+      <HeartbeatInterval>100ms</HeartbeatInterval>
+    </Internal>
+  </Domain>
+</CycloneDDS>

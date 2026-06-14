@@ -1,0 +1,5 @@
+  File "/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/robot_env.py", line 135
+    )
+    ^
+SyntaxError: unmatched ')'
+

@@ -1,0 +1,71 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/base.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/camera.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/controller.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/fishbot.ros2_control.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/fishbot.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/front.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/laser.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/left.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff/right.urdf.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.gv
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.pdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.urdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/mini_diff_robot.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/plugins/gazebo_control_plugin.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/urdf/plugins/gazebo_sensor_plugin.xacro
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/launch/__pycache__/display_robot.launch.cpython-310.pyc
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/launch/display_robot.launch.py
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/launch/gazebo_sim.launch.py
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/base_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/camera_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/controller_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/front_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/laser.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/left_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/meshes/right_link.STL
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/config/display_robot_model.rviz
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/config/fishbot_ros2_controller.yaml
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world/robot_room.world
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world/room/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world/room/model.sdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world1/robot_room.world
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world1/room/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world1/room/model.sdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world2/robot_room.world
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world2/room/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world2/room/model.sdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world3/robot_room.world
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world3/room/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world3/room/model.sdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world4/robot_room.world
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world4/room/model.config
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/world4/room/model.sdf
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/ament_index/resource_index/package_run_dependencies/fishbot_description
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/ament_index/resource_index/parent_prefix_path/fishbot_description
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/environment/path.sh
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/environment/path.dsv
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/local_setup.bash
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/local_setup.sh
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/local_setup.zsh
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/local_setup.dsv
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/package.dsv
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/ament_index/resource_index/packages/fishbot_description
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/cmake/fishbot_descriptionConfig.cmake
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/cmake/fishbot_descriptionConfig-version.cmake
+-- Symlinking: /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/package.xml

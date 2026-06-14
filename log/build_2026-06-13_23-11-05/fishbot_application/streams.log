@@ -1,0 +1,30 @@
+[0.356s] Invoking command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_application': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data
+[0.470s] running egg_info
+[0.477s] writing ../../build/fishbot_application/fishbot_application.egg-info/PKG-INFO
+[0.478s] writing dependency_links to ../../build/fishbot_application/fishbot_application.egg-info/dependency_links.txt
+[0.478s] writing entry points to ../../build/fishbot_application/fishbot_application.egg-info/entry_points.txt
+[0.478s] writing requirements to ../../build/fishbot_application/fishbot_application.egg-info/requires.txt
+[0.478s] writing top-level names to ../../build/fishbot_application/fishbot_application.egg-info/top_level.txt
+[0.494s] reading manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[0.495s] writing manifest file '../../build/fishbot_application/fishbot_application.egg-info/SOURCES.txt'
+[0.495s] running build
+[0.495s] running build_py
+[0.495s] copying fishbot_application/predict.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application
+[0.495s] running install
+[0.499s] running install_lib
+[0.506s] copying /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build/lib/fishbot_application/predict.py -> /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application
+[0.506s] byte-compiling /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application/predict.py to predict.cpython-312.pyc
+[0.507s] running install_data
+[0.507s] running install_egg_info
+[0.516s] removing '/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application-0.0.0-py3.12.egg-info' (and everything under it)
+[0.516s] Copying ../../build/fishbot_application/fishbot_application.egg-info to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages/fishbot_application-0.0.0-py3.12.egg-info
+[0.516s] running install_scripts
+[0.570s] Installing get_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.570s] Installing init_robot_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.570s] Installing nav_to_pose script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.571s] Installing odom_tf_broadcaster script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.571s] Installing passive_joint_pub script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.571s] Installing predict script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.571s] Installing train script to /home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/fishbot_application
+[0.571s] writing list of installed files to '/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log'
+[0.585s] Invoked command in '/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_application' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data
