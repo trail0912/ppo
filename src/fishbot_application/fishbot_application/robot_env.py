@@ -205,78 +205,59 @@ class RobotEnv(gym.Env):
             return True
 
     def _delete_robot_model(self):
-        """删除 Gazebo 中旧的 mini_diff_robot 模型，并验证删除成功"""
+        """删除 Gazebo 中旧的 mini_diff_robot 模型（用 gz model -d）"""
         for attempt in range(3):
             try:
                 result = subprocess.run(
-                    ['gz', 'service', '-s', '/world/default/remove',
-                     '--reqtype', 'gz.msgs.Entity',
-                     '--reptype', 'gz.msgs.Boolean',
-                     '--req', 'name: "mini_diff_robot"\ntype: MODEL',
-                     '--timeout', '5000'],
-                    timeout=10.0, capture_output=True, text=True
+                    ['gz', 'model', '-m', 'mini_diff_robot', '-d'],
+                    timeout=5.0, capture_output=True, text=True
                 )
                 if result.returncode == 0:
-                    self.node.get_logger().info(
-                        f"Old robot model deleted OK (attempt {attempt+1})"
-                    )
+                    self.node.get_logger().info(f"Robot deleted OK (attempt {attempt+1})")
                 else:
                     self.node.get_logger().warn(
-                        f"gz service remove failed: rc={result.returncode} "
-                        f"stdout={result.stdout.strip()} stderr={result.stderr.strip()}"
-                    )
+                        f"gz model -d failed (attempt {attempt+1}): "
+                        f"rc={result.returncode} stderr={result.stderr.strip()[:200]}")
+                time.sleep(1.0)
+                if not self._robot_exists_in_gazebo():
+                    return
             except subprocess.TimeoutExpired:
-                self.node.get_logger().warn("gz service remove TIMED OUT")
+                self.node.get_logger().warn(f"gz model -d TIMED OUT (attempt {attempt+1})")
             except FileNotFoundError:
                 self.node.get_logger().warn("gz command NOT FOUND")
                 return
             except Exception as e:
-                self.node.get_logger().warn(f"gz service remove error: {e}")
+                self.node.get_logger().warn(f"gz model -d error: {e}")
 
-            # 等待 Gazebo 处理删除请求
-            time.sleep(1.0)
-
-            # 验证删除是否成功
-            if not self._robot_exists_in_gazebo():
-                return
-
-        # 3 次重试仍未删除
-        self.node.get_logger().error(
-            "FAILED to delete robot model after 3 attempts!"
-        )
+        self.node.get_logger().error("FAILED to delete robot model after 3 attempts!")
 
     def _cleanup_duplicate_robots(self):
-        """移除 Gazebo 中所有 mini_diff_robot 实例（处理历史上累积的重复模型）"""
+        """移除 Gazebo 中所有 mini_diff_robot 实例（用 gz model -d）"""
         cleanup_count = 0
-        max_iterations = 30  # 安全上限，防止无限循环
+        max_iterations = 10
         for _ in range(max_iterations):
             if not self._robot_exists_in_gazebo():
                 if cleanup_count > 0:
-                    self.node.get_logger().info(
-                        f"Cleaned up {cleanup_count} duplicate robot(s)"
-                    )
+                    self.node.get_logger().info(f"Cleaned up {cleanup_count} duplicate robot(s)")
                 return
             cleanup_count += 1
-            self.node.get_logger().warn(
-                f"Removing stale robot instance #{cleanup_count}"
-            )
+            self.node.get_logger().warn(f"Removing stale robot instance #{cleanup_count}")
             try:
-                subprocess.run(
-                    ['gz', 'service', '-s', '/world/default/remove',
-                     '--reqtype', 'gz.msgs.Entity',
-                     '--reptype', 'gz.msgs.Boolean',
-                     '--req', 'name: "mini_diff_robot"\ntype: MODEL',
-                     '--timeout', '5000'],
-                    timeout=10.0, capture_output=True, text=True
+                result = subprocess.run(
+                    ['gz', 'model', '-m', 'mini_diff_robot', '-d'],
+                    timeout=5.0, capture_output=True, text=True
                 )
-                time.sleep(0.5)
+                if result.returncode != 0:
+                    self.node.get_logger().warn(
+                        f"gz model -d failed: rc={result.returncode} stderr={result.stderr.strip()[:200]}")
+                time.sleep(1.0)
+            except subprocess.TimeoutExpired:
+                self.node.get_logger().warn("gz model -d TIMED OUT")
             except Exception:
                 break
 
         if self._robot_exists_in_gazebo():
-            self.node.get_logger().error(
-                f"After {max_iterations} attempts, robot still exists in Gazebo!"
-            )
+            self.node.get_logger().error(f"FAILED to delete robot after {max_iterations} attempts!")
 
     def _spawn_robot_with_retry(self):
         """生成机器人，含重试机制"""

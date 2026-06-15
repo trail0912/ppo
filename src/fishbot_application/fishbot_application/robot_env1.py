@@ -167,9 +167,10 @@ class RobotEnv1(gym.Env):
             return True
 
     def _cleanup_duplicate_robots(self):
-        """移除 Gazebo 中所有 mini_diff_robot 实例"""
+        """移除 Gazebo 中所有 mini_diff_robot 实例（用 gz model -d，比 service remove 更可靠）"""
         cleanup_count = 0
-        for _ in range(30):
+        max_attempts = 10  # 限制重试，避免死循环
+        for _ in range(max_attempts):
             if not self._robot_exists_in_gazebo():
                 if cleanup_count > 0:
                     self.node.get_logger().info(f"Cleaned up {cleanup_count} duplicate robot(s)")
@@ -177,19 +178,21 @@ class RobotEnv1(gym.Env):
             cleanup_count += 1
             self.node.get_logger().warn(f"Removing stale robot instance #{cleanup_count}")
             try:
-                subprocess.run(
-                    ['gz', 'service', '-s', '/world/default/remove',
-                     '--reqtype', 'gz.msgs.Entity',
-                     '--reptype', 'gz.msgs.Boolean',
-                     '--req', 'name: "mini_diff_robot"\ntype: MODEL',
-                     '--timeout', '5000'],
-                    timeout=10.0, capture_output=True, text=True
+                result = subprocess.run(
+                    ['gz', 'model', '-m', 'mini_diff_robot', '-d'],
+                    timeout=5.0, capture_output=True, text=True
                 )
-                time.sleep(0.5)
-            except Exception:
+                if result.returncode != 0:
+                    self.node.get_logger().warn(
+                        f"gz model -d failed: rc={result.returncode} stderr={result.stderr.strip()[:200]}")
+                time.sleep(1.0)
+            except subprocess.TimeoutExpired:
+                self.node.get_logger().warn("gz model -d TIMED OUT")
+            except Exception as e:
+                self.node.get_logger().warn(f"gz model -d error: {e}")
                 break
         if self._robot_exists_in_gazebo():
-            self.node.get_logger().error("FAILED to delete robot model after 30 attempts!")
+            self.node.get_logger().error(f"FAILED to delete robot after {max_attempts} attempts!")
 
     def _spawn_robot_with_retry(self):
         """生成机器人，含重试机制"""
