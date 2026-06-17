@@ -77,7 +77,7 @@ def generate_launch_description():
             '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
             '/world/default/model/mini_diff_robot/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
             '/world/default/control@ros_gz_interfaces/srv/ControlWorld',
-            '/world/default/set_pose@ros_gz_interfaces/srv/SetEntityPose'
+            '/world/default/set_pose@ros_gz_interfaces/srv/SetEntityPose',
         ],
     )
 

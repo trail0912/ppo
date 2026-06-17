@@ -310,8 +310,8 @@ class RobotEnv(gym.Env):
         super().reset(seed=seed)
 
         # 1. 回合计数 + 初始化状态
-        self._episode_count += 1
-        print(f"\n{'='*40}\n=== Episode {self._episode_count} ===\n{'='*40}")
+        # self._episode_count += 1
+        # print(f"\n{'='*40}\n=== Episode {self._episode_count} ===\n{'='*40}")
         self.step_count = 0
         self._is_terminated = False
         self.reward = 0.0
