@@ -14,8 +14,8 @@
         <right_joint>right_joint</right_joint>
 
         <!-- 底盘参数 -->
-        <wheel_separation>0.16</wheel_separation>
-        <wheel_radius>0.03</wheel_radius>
+        <wheel_separation>0.1595</wheel_separation>
+        <wheel_radius>0.035</wheel_radius>
 
         <!-- cmd_vel -->
         <topic>/cmd_vel</topic>
