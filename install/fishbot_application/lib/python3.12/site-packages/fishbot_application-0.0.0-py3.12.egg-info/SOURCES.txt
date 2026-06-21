@@ -18,6 +18,8 @@ fishbot_application/predict.py
 fishbot_application/robot_env.py
 fishbot_application/robot_env1.py
 fishbot_application/train.py
+fishbot_application/train1.py
+fishbot_application/train2.py
 resource/fishbot_application
 test/test_copyright.py
 test/test_flake8.py

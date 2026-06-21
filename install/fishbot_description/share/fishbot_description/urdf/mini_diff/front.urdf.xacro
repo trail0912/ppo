@@ -75,8 +75,8 @@
         </joint>
 
         <gazebo reference="front_wheel_link">
-            <mu1>0.001</mu1>
-            <mu2>0.001</mu2>
+            <mu1>0.04</mu1>
+            <mu2>0.04</mu2>
             <kp>1e6</kp>
             <kd>100</kd>
         </gazebo>

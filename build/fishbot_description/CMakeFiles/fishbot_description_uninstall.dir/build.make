@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description
+CMAKE_SOURCE_DIR = /home/asus/ros2_ws/chapt6_ws/src/fishbot_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description
+CMAKE_BINARY_DIR = /home/asus/ros2_ws/chapt6_ws/build/fishbot_description
 
 # Utility rule file for fishbot_description_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/fishbot_description_uninstall.dir/compiler_depend.make
 include CMakeFiles/fishbot_description_uninstall.dir/progress.make
 
 CMakeFiles/fishbot_description_uninstall:
-	/usr/bin/cmake -P /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 fishbot_description_uninstall: CMakeFiles/fishbot_description_uninstall
 fishbot_description_uninstall: CMakeFiles/fishbot_description_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/fishbot_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/fishbot_description_uninstall.dir/clean
 
 CMakeFiles/fishbot_description_uninstall.dir/depend:
-	cd /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/CMakeFiles/fishbot_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/asus/ros2_ws/chapt6_ws/build/fishbot_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/asus/ros2_ws/chapt6_ws/src/fishbot_description /home/asus/ros2_ws/chapt6_ws/src/fishbot_description /home/asus/ros2_ws/chapt6_ws/build/fishbot_description /home/asus/ros2_ws/chapt6_ws/build/fishbot_description /home/asus/ros2_ws/chapt6_ws/build/fishbot_description/CMakeFiles/fishbot_description_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/fishbot_description_uninstall.dir/depend
 

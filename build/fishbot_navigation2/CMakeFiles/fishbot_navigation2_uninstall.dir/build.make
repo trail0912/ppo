@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_navigation2
+CMAKE_SOURCE_DIR = /home/asus/ros2_ws/chapt6_ws/src/fishbot_navigation2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2
+CMAKE_BINARY_DIR = /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2
 
 # Utility rule file for fishbot_navigation2_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/fishbot_navigation2_uninstall.dir/compiler_depend.make
 include CMakeFiles/fishbot_navigation2_uninstall.dir/progress.make
 
 CMakeFiles/fishbot_navigation2_uninstall:
-	/usr/bin/cmake -P /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 fishbot_navigation2_uninstall: CMakeFiles/fishbot_navigation2_uninstall
 fishbot_navigation2_uninstall: CMakeFiles/fishbot_navigation2_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/fishbot_navigation2_uninstall.dir/clean:
 .PHONY : CMakeFiles/fishbot_navigation2_uninstall.dir/clean
 
 CMakeFiles/fishbot_navigation2_uninstall.dir/depend:
-	cd /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_navigation2 /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_navigation2 /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2 /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2 /home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_navigation2/CMakeFiles/fishbot_navigation2_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/asus/ros2_ws/chapt6_ws/src/fishbot_navigation2 /home/asus/ros2_ws/chapt6_ws/src/fishbot_navigation2 /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2 /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2 /home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2/CMakeFiles/fishbot_navigation2_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/fishbot_navigation2_uninstall.dir/depend
 

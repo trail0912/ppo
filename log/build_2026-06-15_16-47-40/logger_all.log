@@ -1,0 +1,577 @@
+[0.032s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.032s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='sequential', event_handlers=None, base_paths=['.'], paths=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_argcomplete.argument_parser.argcomplete.ArgcompleteDecorator object at 0x73de8e91b890>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73de8f01bce0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73de8f01bce0>>)
+[0.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.050s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.050s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/asus/ros2_ws/chapt6_ws'
+[0.050s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.050s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.050s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.050s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.050s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.061s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'ignore_ament_install'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extensions ['ros']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'ros'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extensions ['cmake', 'python']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'cmake'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'python'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extensions ['python_setup_py']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(Move_robot30) by extension 'python_setup_py'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ignore_ament_install'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['ros']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'ros'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['cmake', 'python']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'cmake'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'python'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extensions ['python_setup_py']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs) by extension 'python_setup_py'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extensions ['ignore', 'ignore_ament_install']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'ignore'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'ignore_ament_install'
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extensions ['ros']
+[0.062s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'cmake'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'python'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extensions ['python_setup_py']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard) by extension 'python_setup_py'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extensions ['ignore', 'ignore_ament_install']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'ignore'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'ignore_ament_install'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extensions ['ros']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'cmake'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'python'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extensions ['python_setup_py']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard) by extension 'python_setup_py'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extensions ['ignore', 'ignore_ament_install']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'ignore'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'ignore_ament_install'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extensions ['ros']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'cmake'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'python'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extensions ['python_setup_py']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_1) by extension 'python_setup_py'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extensions ['ignore', 'ignore_ament_install']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'ignore'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'ignore_ament_install'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extensions ['ros']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'cmake'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'python'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extensions ['python_setup_py']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_10) by extension 'python_setup_py'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extensions ['ignore', 'ignore_ament_install']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'ignore'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'ignore_ament_install'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extensions ['ros']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'cmake'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'python'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extensions ['python_setup_py']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_11) by extension 'python_setup_py'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extensions ['ignore', 'ignore_ament_install']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'ignore'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'ignore_ament_install'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extensions ['ros']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'ros'
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extensions ['cmake', 'python']
+[0.063s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'cmake'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'python'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extensions ['python_setup_py']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_2) by extension 'python_setup_py'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extensions ['ignore', 'ignore_ament_install']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'ignore'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'ignore_ament_install'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extensions ['ros']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'ros'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extensions ['cmake', 'python']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'cmake'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'python'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extensions ['python_setup_py']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_3) by extension 'python_setup_py'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extensions ['ignore', 'ignore_ament_install']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'ignore'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'ignore_ament_install'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extensions ['ros']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'ros'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extensions ['cmake', 'python']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'cmake'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'python'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extensions ['python_setup_py']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_4) by extension 'python_setup_py'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extensions ['ignore', 'ignore_ament_install']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'ignore'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'ignore_ament_install'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extensions ['ros']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'ros'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extensions ['cmake', 'python']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'cmake'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'python'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extensions ['python_setup_py']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_5) by extension 'python_setup_py'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extensions ['ignore', 'ignore_ament_install']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'ignore'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'ignore_ament_install'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extensions ['ros']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'ros'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extensions ['cmake', 'python']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'cmake'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'python'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extensions ['python_setup_py']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_6) by extension 'python_setup_py'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extensions ['ignore', 'ignore_ament_install']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'ignore'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'ignore_ament_install'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extensions ['ros']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'ros'
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extensions ['cmake', 'python']
+[0.064s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_7) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extensions ['ignore', 'ignore_ament_install']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'ignore'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'ignore_ament_install'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extensions ['ros']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'ros'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extensions ['cmake', 'python']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_8) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extensions ['ignore', 'ignore_ament_install']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'ignore'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'ignore_ament_install'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extensions ['ros']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'ros'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extensions ['cmake', 'python']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(logs/tensorboard/ppo_tensorboard/Move_robot30_9) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extensions ['ignore', 'ignore_ament_install']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'ignore'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'ignore_ament_install'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extensions ['ros']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'ros'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extensions ['cmake', 'python']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extensions ['ignore', 'ignore_ament_install']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'ignore'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'ignore_ament_install'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extensions ['ros']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'ros'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extensions ['cmake', 'python']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_1) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extensions ['ignore', 'ignore_ament_install']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'ignore'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'ignore_ament_install'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extensions ['ros']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'ros'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extensions ['cmake', 'python']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'cmake'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'python'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extensions ['python_setup_py']
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_10) by extension 'python_setup_py'
+[0.065s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'ros'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extensions ['cmake', 'python']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'cmake'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'python'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extensions ['python_setup_py']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_11) by extension 'python_setup_py'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'ros'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extensions ['cmake', 'python']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'cmake'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'python'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extensions ['python_setup_py']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_12) by extension 'python_setup_py'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'ros'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extensions ['cmake', 'python']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'cmake'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'python'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extensions ['python_setup_py']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_13) by extension 'python_setup_py'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'ros'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extensions ['cmake', 'python']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'cmake'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'python'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extensions ['python_setup_py']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_14) by extension 'python_setup_py'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'ros'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extensions ['cmake', 'python']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'cmake'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'python'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extensions ['python_setup_py']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_15) by extension 'python_setup_py'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extensions ['ignore', 'ignore_ament_install']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'ignore'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'ignore_ament_install'
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extensions ['ros']
+[0.066s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_16) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'ignore_ament_install'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extensions ['ros']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_17) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'ignore_ament_install'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extensions ['ros']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_18) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'ignore_ament_install'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extensions ['ros']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_19) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'ignore_ament_install'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extensions ['ros']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_2) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extensions ['ignore', 'ignore_ament_install']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'ignore'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'ignore_ament_install'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extensions ['ros']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'ros'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extensions ['cmake', 'python']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'cmake'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'python'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extensions ['python_setup_py']
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_20) by extension 'python_setup_py'
+[0.067s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_21) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_22) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_23) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_24) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'python'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extensions ['python_setup_py']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_25) by extension 'python_setup_py'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extensions ['ignore', 'ignore_ament_install']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'ignore'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'ignore_ament_install'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extensions ['ros']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'ros'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extensions ['cmake', 'python']
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'cmake'
+[0.068s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_26) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'ros'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extensions ['cmake', 'python']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'cmake'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_3) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'ros'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extensions ['cmake', 'python']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'cmake'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_4) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'ros'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extensions ['cmake', 'python']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'cmake'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_5) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'ros'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extensions ['cmake', 'python']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'cmake'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_6) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'ros'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extensions ['cmake', 'python']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'cmake'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'python'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extensions ['python_setup_py']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_7) by extension 'python_setup_py'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extensions ['ignore', 'ignore_ament_install']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'ignore'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'ignore_ament_install'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extensions ['ros']
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'ros'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extensions ['cmake', 'python']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'cmake'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'python'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extensions ['python_setup_py']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_8) by extension 'python_setup_py'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extensions ['ignore', 'ignore_ament_install']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'ignore'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'ignore_ament_install'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extensions ['ros']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'ros'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extensions ['cmake', 'python']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'cmake'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'python'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extensions ['python_setup_py']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(ppo_tensorboard/Move_robot30_9) by extension 'python_setup_py'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_application) by extensions ['ignore', 'ignore_ament_install']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_application) by extension 'ignore'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_application) by extension 'ignore_ament_install'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_application) by extensions ['ros']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_application) by extension 'ros'
+[0.071s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fishbot_application' with type 'ros.ament_python' and name 'fishbot_application'
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_description) by extension 'ignore'
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_description) by extension 'ignore_ament_install'
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_description) by extensions ['ros']
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_description) by extension 'ros'
+[0.071s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fishbot_description' with type 'ros.ament_cmake' and name 'fishbot_description'
+[0.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_navigation2) by extensions ['ignore', 'ignore_ament_install']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_navigation2) by extension 'ignore'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_navigation2) by extension 'ignore_ament_install'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_navigation2) by extensions ['ros']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/fishbot_navigation2) by extension 'ros'
+[0.072s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fishbot_navigation2' with type 'ros.ament_cmake' and name 'fishbot_navigation2'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extensions ['ignore', 'ignore_ament_install']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'ignore'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'ignore_ament_install'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extensions ['ros']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'ros'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extensions ['cmake', 'python']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'cmake'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'python'
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extensions ['python_setup_py']
+[0.072s] Level 1:colcon.colcon_core.package_identification:_identify(train_logs) by extension 'python_setup_py'
+[0.072s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.072s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.072s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_target' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_clean_cache' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_clean_first' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'cmake_force_configure' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'ament_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'catkin_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_application' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.083s] DEBUG:colcon.colcon_core.verb:Building package 'fishbot_application' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asus/ros2_ws/chapt6_ws/build/fishbot_application', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application', 'merge_install': False, 'path': '/home/asus/ros2_ws/chapt6_ws/src/fishbot_application', 'symlink_install': False, 'test_result_base': None}
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_target' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.083s] DEBUG:colcon.colcon_core.verb:Building package 'fishbot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asus/ros2_ws/chapt6_ws/build/fishbot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description', 'merge_install': False, 'path': '/home/asus/ros2_ws/chapt6_ws/src/fishbot_description', 'symlink_install': False, 'test_result_base': None}
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_target' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_clean_first' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'cmake_force_configure' from command line to 'False'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'ament_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.083s] Level 5:colcon.colcon_core.verb:set package 'fishbot_navigation2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.083s] DEBUG:colcon.colcon_core.verb:Building package 'fishbot_navigation2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/asus/ros2_ws/chapt6_ws/build/fishbot_navigation2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/asus/ros2_ws/chapt6_ws/install/fishbot_navigation2', 'merge_install': False, 'path': '/home/asus/ros2_ws/chapt6_ws/src/fishbot_navigation2', 'symlink_install': False, 'test_result_base': None}
+[0.083s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.084s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'fishbot_application'
+[0.084s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_application' with build type 'ament_python'
+[0.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('fishbot_application', 'ament_prefix_path')
+[0.084s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/hook/ament_prefix_path.dsv'
+[0.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/hook/ament_prefix_path.sh'
+[0.085s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.184s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_application'
+[0.184s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.425s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_application': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/asus/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(rl_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/asus/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/asus/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_application' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/asus/ros2_ws/chapt6_ws/build/fishbot_application/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(rl_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/fishbot_application build --build-base /home/asus/ros2_ws/chapt6_ws/build/fishbot_application/build install --record /home/asus/ros2_ws/chapt6_ws/build/fishbot_application/install.log --single-version-externally-managed install_data
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application' for CMake module files
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application' for CMake config files
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/lib'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/bin'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/lib/pkgconfig/fishbot_application.pc'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/lib/python3.12/site-packages'
+[0.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('fishbot_application', 'pythonpath')
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/hook/pythonpath.dsv'
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/hook/pythonpath.sh'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/bin'
+[0.658s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fishbot_application)
+[0.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/package.dsv'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/package.sh'
+[0.659s] INFO:colcon.colcon_core.shell:Creating package script '/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/fishbot_application/package.bash'
+[0.659s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asus/ros2_ws/chapt6_ws/install/fishbot_application/share/colcon-core/packages/fishbot_application)
+[0.659s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'fishbot_application' finished with '0'
+[0.659s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'fishbot_description'
+[0.659s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_description' with build type 'ament_cmake'
+[0.659s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/asus/ros2_ws/chapt6_ws/src/fishbot_description'
+[0.659s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/asus/ros2_ws/chapt6_ws/build/fishbot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asus/ros2_ws/chapt6_ws/install/fishbot_application:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(rl_env) /usr/bin/cmake --build /home/asus/ros2_ws/chapt6_ws/build/fishbot_description -- -j24 -l24
+[0.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/asus/ros2_ws/chapt6_ws/build/fishbot_description' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/asus/ros2_ws/chapt6_ws/install/fishbot_application:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com VIRTUAL_ENV_PROMPT=(rl_env) /usr/bin/cmake --build /home/asus/ros2_ws/chapt6_ws/build/fishbot_description -- -j24 -l24
+[0.675s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fishbot_description)
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description' for CMake module files
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description' for CMake config files
+[0.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('fishbot_description', 'cmake_prefix_path')
+[0.676s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/hook/cmake_prefix_path.dsv'
+[0.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/hook/cmake_prefix_path.sh'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/bin'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/lib/pkgconfig/fishbot_description.pc'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/lib/python3.12/site-packages'
+[0.677s] Level 1:colcon.colcon_core.environment:checking '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/bin'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/package.dsv'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/package.sh'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/fishbot_description/package.bash'
+[0.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/asus/ros2_ws/chapt6_ws/install/fishbot_description/share/colcon-core/packages/fishbot_description)
+[0.678s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'fishbot_description' finished with '2'
+[0.678s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[0.678s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[0.678s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.678s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.678s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asus/ros2_ws/chapt6_ws/install/local_setup.sh'
+[0.678s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/asus/ros2_ws/chapt6_ws/install/_local_setup_util_sh.py'
+[0.679s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asus/ros2_ws/chapt6_ws/install/setup.sh'
+[0.680s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/asus/ros2_ws/chapt6_ws/install/local_setup.bash'
+[0.680s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/asus/ros2_ws/chapt6_ws/install/setup.bash'

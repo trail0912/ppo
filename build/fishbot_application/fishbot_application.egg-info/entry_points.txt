@@ -1,8 +1,14 @@
 [console_scripts]
+bilstm_train = fishbot_application.train:bilstm_main
 get_robot_pose = fishbot_application.get_robot_pose:main
 init_robot_pose = fishbot_application.init_robot_pose:main
+lstm_train = fishbot_application.train:lstm_main
+lstm_train1 = fishbot_application.train1:main
+lstm_train2 = fishbot_application.train2:main
 nav_to_pose = fishbot_application.nav_to_pose:main
 odom_tf_broadcaster = fishbot_application.odom_tf_broadcaster:main
 passive_joint_pub = fishbot_application.passive_joint_pub:main
+ppo_train = fishbot_application.train:ppo_main
 predict = fishbot_application.predict:main
-train = fishbot_application.train:main
+predict_all = fishbot_application.predict:predict_all
+train_all = fishbot_application.train:main

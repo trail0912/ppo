@@ -1,8 +1,8 @@
-# Install script for directory: /home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description
+# Install script for directory: /home/asus/ros2_ws/chapt6_ws/src/fishbot_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/s-lin/LIN/ros2_ws/chapt6_ws/install/fishbot_description")
+  set(CMAKE_INSTALL_PREFIX "/home/asus/ros2_ws/chapt6_ws/install/fishbot_description")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,25 +44,24 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE DIRECTORY FILES
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/urdf"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/launch"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/meshes"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/config"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world1"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world2"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world3"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world4"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/world5"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/urdf"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/launch"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/meshes"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/config"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/world"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/world1"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/world2"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/world3"
+    "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/world4"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/fishbot_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/fishbot_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/fishbot_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/fishbot_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,7 +69,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description/environment" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description/environment" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -78,42 +77,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description/environment" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description/environment" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/packages/fishbot_description")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_index/share/ament_index/resource_index/packages/fishbot_description")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description/cmake" TYPE FILE FILES
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_core/fishbot_descriptionConfig.cmake"
-    "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_core/fishbot_descriptionConfig-version.cmake"
+    "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_core/fishbot_descriptionConfig.cmake"
+    "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/ament_cmake_core/fishbot_descriptionConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/s-lin/LIN/ros2_ws/chapt6_ws/src/fishbot_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fishbot_description" TYPE FILE FILES "/home/asus/ros2_ws/chapt6_ws/src/fishbot_description/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -124,5 +123,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/s-lin/LIN/ros2_ws/chapt6_ws/build/fishbot_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/asus/ros2_ws/chapt6_ws/build/fishbot_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

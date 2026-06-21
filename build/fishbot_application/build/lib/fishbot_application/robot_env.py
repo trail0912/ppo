@@ -57,9 +57,10 @@ class RobotEnv(gym.Env):
         )
 
         while not self.world_control_client.wait_for_service(timeout_sec=1.0):
-            self.node.get_logger().info(
-                '/world/default/control not available, waiting...'
-            )
+            # self.node.get_logger().info(
+            #     '/world/default/control not available, waiting...'
+            # )
+            continue
 
         # 新增：用于每轮 reset 时强制设置机器人位置
         self.set_pose_client = self.node.create_client(
@@ -67,9 +68,10 @@ class RobotEnv(gym.Env):
             '/world/default/set_pose'
         )
         while not self.set_pose_client.wait_for_service(timeout_sec=1.0):
-            self.node.get_logger().info(
-                '/world/default/set_pose not available, waiting...'
-            )
+            # self.node.get_logger().info(
+            #     '/world/default/set_pose not available, waiting...'
+            # )
+            continue
 
         # 确保初始位姿有效
         self.initial_pose = {'x': 0.0, 'y': 0.0, 'yaw': 0.0}
@@ -89,6 +91,8 @@ class RobotEnv(gym.Env):
         self._is_terminated = False
         self._last_collision_time = 0
         self._resetting = False  # reset 期间抑制轨迹发布
+        self._episode_count = 0  # 当前模型内的回合计数
+        self._episode_stats = []  # 每回合统计 [{event, reward, steps, goal_dist}]
         self.goal=0
         self.goal_dist=0
         self.reward=0
@@ -141,6 +145,18 @@ class RobotEnv(gym.Env):
             ])
 
 
+
+    def reset_episode_counter(self):
+        """每个新模型开始时调用，回合计数从 1 开始"""
+        self._episode_count = 0
+
+    def reset_stats(self):
+        """每个新模型开始时调用，清空回合统计"""
+        self._episode_stats = []
+
+    def get_stats(self):
+        """获取当前模型所有回合的统计"""
+        return self._episode_stats.copy()
 
     def set_goal(self, x, y):
         """设置训练目标点"""
@@ -202,15 +218,15 @@ class RobotEnv(gym.Env):
                      '--timeout', '5000'],
                     timeout=10.0, capture_output=True, text=True
                 )
-                if result.returncode == 0:
-                    self.node.get_logger().info(
-                        f"Old robot model deleted OK (attempt {attempt+1})"
-                    )
-                else:
-                    self.node.get_logger().warn(
-                        f"gz service remove failed: rc={result.returncode} "
-                        f"stdout={result.stdout.strip()} stderr={result.stderr.strip()}"
-                    )
+                # if result.returncode == 0:
+                #     self.node.get_logger().info(
+                #         f"Old robot model deleted OK (attempt {attempt+1})"
+                #     )
+                # else:
+                #     self.node.get_logger().warn(
+                #         f"gz service remove failed: rc={result.returncode} "
+                #         f"stdout={result.stdout.strip()} stderr={result.stderr.strip()}"
+                #     )
             except subprocess.TimeoutExpired:
                 self.node.get_logger().warn("gz service remove TIMED OUT")
             except FileNotFoundError:
@@ -234,18 +250,18 @@ class RobotEnv(gym.Env):
     def _cleanup_duplicate_robots(self):
         """移除 Gazebo 中所有 mini_diff_robot 实例（处理历史上累积的重复模型）"""
         cleanup_count = 0
-        max_iterations = 30  # 安全上限，防止无限循环
+        max_iterations = 5  # 安全上限，防止无限循环
         for _ in range(max_iterations):
             if not self._robot_exists_in_gazebo():
-                if cleanup_count > 0:
-                    self.node.get_logger().info(
-                        f"Cleaned up {cleanup_count} duplicate robot(s)"
-                    )
+                # if cleanup_count > 0:
+                #     self.node.get_logger().info(
+                #         f"Cleaned up {cleanup_count} duplicate robot(s)"
+                #     )
                 return
             cleanup_count += 1
-            self.node.get_logger().warn(
-                f"Removing stale robot instance #{cleanup_count}"
-            )
+            # self.node.get_logger().warn(
+            #     f"Removing stale robot instance #{cleanup_count}"
+            # )
             try:
                 subprocess.run(
                     ['gz', 'service', '-s', '/world/default/remove',
@@ -271,29 +287,14 @@ class RobotEnv(gym.Env):
             try:
                 result = subprocess.run(
                     self.spawn_robot_cmd,
-                    timeout=30.0,
+                    timeout=10.0,
                     capture_output=True,
                     text=True
                 )
-                if result.returncode == 0:
-                    # 等待 Gazebo 注册新模型
-                    time.sleep(1.0)
+                for _ in range(50):
                     if self._robot_exists_in_gazebo():
-                        self.node.get_logger().info(
-                            f"Robot spawned OK (attempt {attempt+1})"
-                        )
                         return True
-                    else:
-                        self.node.get_logger().warn(
-                            f"Spawn returned OK but robot not found in model list "
-                            f"(attempt {attempt+1})"
-                        )
-                else:
-                    self.node.get_logger().warn(
-                        f"Spawn failed rc={result.returncode}: "
-                        f"stderr={result.stderr.strip()[:200]} "
-                        f"(attempt {attempt+1})"
-                    )
+                    time.sleep(0.1)
             except subprocess.TimeoutExpired:
                 self.node.get_logger().warn(
                     f"Spawn TIMED OUT (attempt {attempt+1})"
@@ -314,7 +315,9 @@ class RobotEnv(gym.Env):
         """重置环境，不依赖 Gazebo 服务"""
         super().reset(seed=seed)
 
-        # 1. 初始化步骤计数和状态
+        # 1. 回合计数 + 初始化状态
+        # self._episode_count += 1
+        # print(f"\n{'='*40}\n=== Episode {self._episode_count} ===\n{'='*40}")
         self.step_count = 0
         self._is_terminated = False
         self.reward = 0.0
@@ -332,8 +335,8 @@ class RobotEnv(gym.Env):
         rclpy.spin_once(self.node, timeout_sec=0.1)
 
         # 3. 清理所有残留机器人 + 生成新机器人（不重置世界，避免 sim time 跳变）
-        self._cleanup_duplicate_robots()
-        time.sleep(1.0)  # 等待 Gazebo 完成删除操作
+        self._delete_robot_model()
+        time.sleep(0.2)  # 等待 Gazebo 完成删除操作
 
         if not self._spawn_robot_with_retry():
             self.node.get_logger().error(
@@ -342,6 +345,9 @@ class RobotEnv(gym.Env):
 
         # 4. 强制把机器人放回原点
         self.reset_robot_pose(x=0.0, y=0.0, yaw=0.0)
+
+        for _ in range(10):
+            rclpy.spin_once(self.node, timeout_sec=0.05)
 
         # 5. 通知 odom_tf_broadcaster：robot 已 reset
         self.reset_signal_pub.publish(Bool(data=True))
@@ -371,8 +377,8 @@ class RobotEnv(gym.Env):
         # 9. 重置机器人位姿（基于 odom 偏移后的值）
         self.robot_pose = self.initial_pose.copy()
 
-        print(self.robot_pose['x'])
-        print(self.robot_pose['y'])
+        # print(self.robot_pose['x'])
+        # print(self.robot_pose['y'])
 
         with self.path_lock:
             self.robot_path = [
@@ -488,17 +494,17 @@ class RobotEnv(gym.Env):
         # print(self.robot_pose['y'])
 
 
-        # while time.time()-self.new_time <0.15:
-        #     rclpy.spin_once(self.node, timeout_sec=0.01)
+        while time.time() - self.new_time < 0.15:
+            rclpy.spin_once(self.node, timeout_sec=0.01)
 
         self.vel_pub.publish(twist)
         global TIME_USE
-        TIME_USE=time.time()
-        new_time=time.time()
+        TIME_USE = time.time()
+        new_time = time.time()
         self.step_count += 1
         stop_twist = Twist()
 
-        while time.time()-new_time <0.05:
+        while time.time() - new_time < 0.3:
             rclpy.spin_once(self.node, timeout_sec=0.01)
 
         self.vel_pub.publish(stop_twist)
@@ -568,8 +574,14 @@ class RobotEnv(gym.Env):
                     reward =-40-goal_dist*3
                     self.reward+=reward
                     self._is_terminated = True
-                    #print('碰撞 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                    self.log_event("collision", goal_dist)
+                    self._record_episode("collision", goal_dist)
+                    print(
+                        f"collision | step: {self.step_count} | "
+                        f"reward: {self.reward:.2f} | "
+                        f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                        f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                        f"dist: {goal_dist:.2f}"
+                    )
             terminated = True
 
         # 到达目标奖励
@@ -582,8 +594,14 @@ class RobotEnv(gym.Env):
                 reward += 50+ max(0, 150 - self.step_count) * 0.2
                 self.reward+=reward
                 self._is_terminated = True
-                #print('到达 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                self.log_event("arrive", goal_dist)
+                self._record_episode("arrive", goal_dist)
+                print(
+                    f"arrive | step: {self.step_count} | "
+                    f"reward: {self.reward:.2f} | "
+                    f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                    f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                    f"dist: {goal_dist:.2f}"
+                )
             terminated = True
         elif self.step_count >= 150 and current_time - self._last_collision_time > 10.0:
             if not self._is_terminated:
@@ -593,8 +611,14 @@ class RobotEnv(gym.Env):
                 reward += -25-2*goal_dist
                 self.reward+=reward
                 self._is_terminated = True
-                #print('超时 '+str(self.step_count)+' '+str(self.reward)+' '+str(self.robot_pose['x'])+' '+str(self.robot_pose['y'])+' '+str(self.current_goal[0])+' '+ str(self.current_goal[1])+' '+str(goal_dist))
-                self.log_event("timeout", goal_dist)
+                self._record_episode("timeout", goal_dist)
+                print(
+                    f"timeout | step: {self.step_count} | "
+                    f"reward: {self.reward:.2f} | "
+                    f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | "
+                    f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | "
+                    f"dist: {goal_dist:.2f}"
+                )
             terminated = True
         else:
             terminated=False
@@ -667,14 +691,23 @@ class RobotEnv(gym.Env):
         """旧 marker 靠 lifetime 在 reset 期间自动过期，无需手动清除"""
         pass
 
+    def _record_episode(self, event_type, goal_dist):
+        """记录每回合统计"""
+        self._episode_stats.append({
+            'event': event_type,
+            'reward': round(self.reward, 2),
+            'steps': self.step_count,
+            'goal_dist': round(goal_dist, 2)
+        })
+
     def _publish_visualization(self):
         if not self.robot_pose:
             return
 
         g = self.current_goal
-        self.node.get_logger().info(
-            f'VIZ: goal=({g[0]:.1f},{g[1]:.1f})' if g else 'VIZ: no goal',
-            throttle_duration_sec=3.0)
+        # self.node.get_logger().info(
+        #     f'VIZ: goal=({g[0]:.1f},{g[1]:.1f})' if g else 'VIZ: no goal',
+        #     throttle_duration_sec=3.0)
 
         # 1. 机器人当前状态标记
         marker_array = MarkerArray()
@@ -736,29 +769,6 @@ class RobotEnv(gym.Env):
             goal_marker.scale.z = 0.3
             goal_marker.color = ColorRGBA(r=1.0, g=0.0, b=0.0, a=0.8)
             self.goal_pub.publish(goal_marker)
-
-    # 增加一个方法同时打印和写日志
-    def log_event(self, event_type, goal_dist):
-        msg = f"{event_type} | step: {self.step_count} | reward: {self.reward:.2f} | " \
-            f"robot: ({self.robot_pose['x']:.2f},{self.robot_pose['y']:.2f}) | " \
-            f"goal: ({self.current_goal[0]:.2f},{self.current_goal[1]:.2f}) | dist: {goal_dist:.2f}"
-
-        # 打印到终端
-        print(msg)
-
-        # 写入 CSV
-        with open(self.event_log_path, "a", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                event_type,
-                self.step_count,
-                self.reward,
-                self.robot_pose["x"],
-                self.robot_pose["y"],
-                self.current_goal[0],
-                self.current_goal[1],
-                goal_dist
-            ])
 
 
 class CmdVelGuard():
